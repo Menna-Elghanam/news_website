@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>news_website</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_logo">News Website</div>
+      <div class="header_searsh">search</div>
+      <%- include('../partials/search.ejs') %> 
+
+    </header>
+    <div class="wrapper">
+      <div class="single_news">
+        <% if(article!=null){%>
+            <a href="/">&larr;-Back</a>
+        <h2><%- article.title.rendered %></h2>
+        <p><%- article.content.rendered %></p>
+
+        <%} else{ %> NO posts founddddddddddd <% } %>
+      </div>
+    </div>
+  </body>
+</html>
